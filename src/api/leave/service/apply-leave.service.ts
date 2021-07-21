@@ -262,7 +262,7 @@ export class ApplyLeaveService {
 									data.TIME_SLOT == 'Q1' ? workingHoursData.quarterday.Q1 :
 										data.TIME_SLOT == 'Q2' ? workingHoursData.quarterday.Q2 :
 											data.TIME_SLOT == 'Q3' ? workingHoursData.quarterday.Q3 :
-												data.TIME_SLOT == 'Q4' ? workingHoursData.quarterday.PQ4 :
+												data.TIME_SLOT == 'Q4' ? workingHoursData.quarterday.Q4 :
 													workingHoursData.fullday;
 
 							leaveDetail.startDate = leaveDetail.startDate + timeDetails.start_time;
