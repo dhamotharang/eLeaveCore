@@ -57,7 +57,8 @@ export class DashboardAdminService {
    * @memberof DashboardAdminService
    */
   public getBirthdayList(tenantGuid: string) {
-    let filter = ['(DELETED_AT IS NULL) AND (TENANT_GUID=' + tenantGuid + ')'];
+    // let filter = ['(DELETED_AT IS NULL) AND (TENANT_GUID=' + tenantGuid + ')'];
+    let filter = ['(RESIGNATION_DATE IS NULL) AND (TENANT_GUID=' + tenantGuid + ')'];
     let fields = ['USER_GUID', 'FULLNAME', 'DESIGNATION', 'DOB'];
     return this.userprofileDbService.findByFilterV3(fields, filter);
   }
